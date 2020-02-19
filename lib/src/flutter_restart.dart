@@ -15,9 +15,8 @@ class RestartWidget extends StatefulWidget {
     assert(context != null);
 
     return (context
-        .ancestorInheritedElementForWidgetOfExactType(
-        _RestartInheritedWidget)
-        .widget as _RestartInheritedWidget)
+            .getElementForInheritedWidgetOfExactType<_RestartInheritedWidget>()
+            .widget as _RestartInheritedWidget)
         .state;
   }
 }
